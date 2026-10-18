@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hybrid Capture Review | Bank Behind the Screen</title>
+<meta name="description" content="Scott breaks down Hybrid Capture: AI prompts that turn any sales page into a buyer-capturing review page. One-time payment, no monthly fees. Watch the video before you buy.">
+<meta property="og:title" content="Hybrid Capture Review: Watch This Before You Buy">
+<meta property="og:description" content="AI-built review pages that capture buyers. One-time payment, no monthly fees.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:image" content="thumbnail.png">
+<style>
+  /* ===== COLOR CONTROLS (matches the neon thumbnail) ===== */
+  :root{
+    --bg:#04010a;
+    --bg-2:#0c0620;
+    --card:#100829;
+    --text:#f3eefc;
+    --muted:#a79bc4;
+    --purple:#a855f7;
+    --purple-d:#7c3aed;
+    --orange:#ff7a1a;
+    --orange-l:#ffb347;
+    --line:#2a1b52;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.65;font-size:18px;
+    background-image:
+      radial-gradient(700px 420px at 15% 0%,rgba(168,85,247,.28),transparent 70%),
+      radial-gradient(700px 420px at 90% 8%,rgba(255,122,26,.22),transparent 70%);
+    background-repeat:no-repeat;
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:0 20px}
+  .pill{
+    display:table;margin:28px auto 0;padding:9px 22px;border-radius:999px;
+    font-style:italic;font-weight:900;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    background:var(--bg-2);border:2px solid transparent;
+    background-image:linear-gradient(var(--bg-2),var(--bg-2)),linear-gradient(90deg,var(--purple),#fff,var(--orange));
+    background-origin:border-box;background-clip:padding-box,border-box;
+    box-shadow:0 0 18px rgba(168,85,247,.35);
+  }
+  h1{
+    font-size:clamp(30px,6vw,52px);line-height:1.04;text-align:center;margin:22px 0 14px;
+    font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:-.01em;
+    text-shadow:0 0 24px rgba(168,85,247,.85);
+  }
+  h1 .fire{
+    background:linear-gradient(180deg,var(--orange-l),var(--orange) 55%,#ff5a00);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow:none;filter:drop-shadow(0 0 14px rgba(255,106,0,.7));
+  }
+  .sub{text-align:center;color:var(--muted);font-size:clamp(17px,3vw,21px);max-width:640px;margin:0 auto 26px}
+
+  /* ===== VIDEO with thumbnail cover ===== */
+  .video{
+    position:relative;width:100%;padding-top:56.25%;border-radius:16px;overflow:hidden;background:#000;
+    border:2px solid transparent;
+    background-image:linear-gradient(#000,#000),linear-gradient(90deg,var(--purple),#fff,var(--orange));
+    background-origin:border-box;background-clip:padding-box,border-box;
+    box-shadow:0 0 50px rgba(168,85,247,.35),0 0 50px rgba(255,122,26,.2);
+  }
+  .video iframe,.video .cover{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .cover{
+    cursor:pointer;border:0;padding:0;background:#000 url("thumbnail.png") center/cover no-repeat;
+  }
+  .cover .play{
+    position:absolute;left:73%;top:50%;width:var(--ps);height:var(--ps);margin:calc(var(--ps) / -2) 0 0 calc(var(--ps) / -2);border-radius:50%;
+    background:linear-gradient(180deg,var(--orange-l),var(--orange));
+    box-shadow:0 0 0 6px rgba(255,255,255,.9),0 0 40px rgba(255,122,26,.8);
+    transition:transform .15s ease;
+  }
+  .cover .play:after{
+    content:"";position:absolute;left:38%;top:27%;border-style:solid;border-width:calc(var(--ps) * .23) 0 calc(var(--ps) * .23) calc(var(--ps) * .36);
+    border-color:transparent transparent transparent #fff;
+  }
+  .cover{--ps:clamp(54px,11vw,92px)}
+  .cover:hover .play,.cover:focus-visible .play{transform:scale(1.1)}
+  .cover:focus-visible{outline:3px solid var(--orange);outline-offset:-3px}
+
+  .cta-block{text-align:center;margin:32px 0 8px}
+  .btn{
+    display:inline-block;text-decoration:none;color:#1a0a00;font-weight:900;font-style:italic;text-transform:uppercase;
+    background:linear-gradient(180deg,var(--orange-l),var(--orange) 60%,#ff5a00);
+    padding:18px 36px;border-radius:12px;font-size:clamp(16px,3.4vw,22px);letter-spacing:.03em;
+    box-shadow:0 7px 0 #a63e00,0 0 34px rgba(255,122,26,.55);
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:hover{transform:translateY(3px);box-shadow:0 4px 0 #a63e00,0 0 44px rgba(255,122,26,.75)}
+  .btn:active{transform:translateY(7px);box-shadow:0 0 0 #a63e00,0 0 30px rgba(255,122,26,.6)}
+  .micro{color:var(--muted);font-size:14px;margin-top:18px}
+
+  section{margin:58px 0}
+  h2{font-size:clamp(24px,4.6vw,34px);line-height:1.15;margin-bottom:16px;font-style:italic;text-transform:uppercase;font-weight:900}
+  h2 em{font-style:italic;color:var(--orange);text-shadow:0 0 16px rgba(255,122,26,.55)}
+  p{margin-bottom:16px}
+  strong{color:#fff}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:0 0 40px rgba(124,58,237,.18)}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:10px}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}}
+  .item{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;color:var(--muted)}
+  .item b{display:block;color:var(--purple);margin-bottom:2px;text-shadow:0 0 12px rgba(168,85,247,.6)}
+  .check{list-style:none}
+  .check li{padding-left:36px;position:relative;margin-bottom:12px}
+  .check li:before{content:"✓";position:absolute;left:0;top:1px;width:25px;height:25px;border-radius:50%;
+    background:linear-gradient(135deg,var(--purple),var(--orange));color:#fff;font-weight:900;text-align:center;line-height:25px;font-size:15px}
+  .tip{border-left:5px solid var(--orange);background:var(--bg-2);padding:18px 20px;border-radius:0 12px 12px 0;box-shadow:0 0 30px rgba(255,122,26,.12)}
+  .tip strong{color:var(--orange)}
+  .sig{text-align:center;color:var(--muted)}
+  footer{border-top:1px solid var(--line);margin-top:70px;padding:30px 0 50px;color:var(--muted);font-size:13px;line-height:1.6}
+  footer p{margin-bottom:10px}
+
+  .vidnote{text-align:center;color:var(--muted);font-size:14px;margin-top:12px}
+  .vidnote a{color:var(--orange-l)}
+  .steps{counter-reset:s;list-style:none}
+  .steps li{counter-increment:s;position:relative;padding:4px 0 4px 56px;margin-bottom:18px}
+  .steps li:before{content:counter(s);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;
+    background:linear-gradient(135deg,var(--purple),var(--orange));color:#fff;font-weight:900;text-align:center;line-height:40px}
+  .code{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:800;letter-spacing:.08em;
+    padding:4px 12px;border-radius:8px;border:1px dashed var(--orange);color:var(--orange-l);background:rgba(255,122,26,.08)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="pill">Bank Behind the Screen</div>
+
+  <h1>Turn Any Sales Page Into A <span class="fire">Buyer&#8209;Capturing Review&nbsp;Page</span></h1>
+  <p class="sub">Hey, Scott here. Watch the short video below before you click anything or spend a dime.</p>
+
+  <!-- Video: click the thumbnail to play -->
+  <div class="video" id="videoBox">
+    <button class="cover" id="cover" type="button" aria-label="Play video"><span class="play"></span></button>
+    <noscript>
+      <iframe src="https://www.youtube.com/embed/P01IJI21YzQ" title="YouTube video player" allowfullscreen></iframe>
+    </noscript>
+  </div>
+  <p class="vidnote">Video not playing? <a href="https://www.youtube.com/watch?v=P01IJI21YzQ" target="_blank" rel="noopener">Watch it on YouTube</a></p>
+
+  <div class="cta-block">
+    <a class="btn" href="https://warriorplus.com/o2/a/stmhm89/0" target="_blank" rel="sponsored noopener">Check Out Hybrid Capture &rarr;</a>
+    <p class="micro">One-time payment &bull; no monthly fees &bull; 30-day money-back guarantee<br>Use code <span class="code">HYBRID20</span> at checkout</p>
+  </div>
+
+  <section>
+    <h2>Hey everybody, <em>Scott here.</em></h2>
+    <p>I've been marketing for 10+ years now, and I've seen all kinds of things come and go. One thing I'll tell you for sure: slinging links is not marketing. Spamming a link at people doesn't convert anymore, and most of us are burned out on it.</p>
+    <p>So when I came across <strong>Hybrid Capture</strong> from Lee Murray, it made me stop. I watched his whole walkthrough, and here's the idea in plain English. Instead of sending people straight to somebody's sales page, you send them to <strong>your own review page</strong> that warms them up, gives them bonuses, and captures their email. That's a whole different game.</p>
+    <p>You know me, I don't promote just anything. I'm telling you what I saw in the demo, and I'll let you decide if it makes sense for you.</p>
+  </section>
+
+  <section>
+    <h2>What Hybrid Capture <em>actually does</em></h2>
+    <p>You take a long sales page, the kind that just keeps going and going, and you turn it into a nice product review. It's all done with AI prompts. You can use ChatGPT, Gemini, whatever you want. Lee uses ChatGPT in the demo because he likes the images it makes.</p>
+    <p>The prompts are built so you don't get that robotic AI stuff. No "it's not this, it's that," no "here's the part nobody tells you." Lee's whole approach is that you're an authentic affiliate marketer, and he says the output shows it. And you don't write anything. It's an interactive process where the AI asks you questions, you verify the info, and it builds the page.</p>
+  </section>
+
+  <section>
+    <h2>What's <em>inside</em></h2>
+    <div class="grid">
+      <div class="item"><b>Review page prompts</b>Turn a long sales page into a clean, human-sounding product review.</div>
+      <div class="item"><b>Custom bonuses</b>Every day your AI gives you three bonus ideas that fit the product, then it actually creates the bonuses for you.</div>
+      <div class="item"><b>Built-in opt-in</b>Most reviews don't capture leads. These do, and the opt-in gives away the "List Building in the Modern Era" funnel as the incentive.</div>
+      <div class="item"><b>2-week email follow-up</b>A follow-up email system is baked right in, about two weeks worth.</div>
+      <div class="item"><b>"No thanks" = your affiliate link</b>If they don't want to opt in, they click through to the product on your affiliate link.</div>
+      <div class="item"><b>Video, thumbnail &amp; SEO prompts</b>Prompts for a script, a thumbnail, your video description and the SEO. Or skip video and knock it out in a couple minutes.</div>
+      <div class="item"><b>Short-form video GPT</b>A custom GPT for quick short videos, plus training on making your own shortened URL show up in them.</div>
+      <div class="item"><b>Works with your builder</b>Supports Leads Leap, Thrive Architect and Systeme.io.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why <em>buyer-intent</em> traffic?</h2>
+    <p>Here's Lee's strategy, and it's why this stuck with me. When you go after product names, you're targeting people who are already searching for that exact product. That's buyer-intent traffic, and he calls it the highest quality traffic you can get.</p>
+    <p>His training covers what he calls launch jacking. The products are new, so there's not much competition yet, and short videos and review pages built around those product names have a better shot at ranking. Those videos send people to your Hybrid Capture page, they can opt in, and you can earn the commission <em>and</em> put a buyer on your list.</p>
+    <p>Now, I'm not promising you anything. That's the method Lee shows and teaches, and results depend on you doing the work.</p>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>The <em>numbers</em>, plain and simple</h2>
+      <ul class="check">
+        <li>Pre-launch price in the video: <strong>$47, minus $20 with code <span class="code">HYBRID20</span> = $27</strong></li>
+        <li><strong>One-time payment.</strong> Not $27 a month</li>
+        <li><strong>No monthly fees</strong> and no limits on how many pages you create</li>
+        <li><strong>30-day money-back guarantee</strong></li>
+        <li>Lee says he uses it every day, so he keeps it updated and fixes issues fast</li>
+        <li>Members area with training, prompts and the video walkthroughs</li>
+      </ul>
+      <p style="margin:14px 0 0;font-size:14px;color:var(--muted)">Pricing and the coupon are what Lee said in his pre-launch video. Check the official page for what's live today.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it <em>works</em></h2>
+    <ol class="steps">
+      <li><strong>Pick a product.</strong> Go for one people are already searching for by name.</li>
+      <li><strong>Copy and paste the prompts.</strong> The AI asks questions, you verify, and it builds your review page.</li>
+      <li><strong>Add your bonuses.</strong> The AI creates the bonuses it mentioned on your page.</li>
+      <li><strong>Make a video (optional).</strong> Use the script, thumbnail and description prompts, or skip it.</li>
+      <li><strong>Send traffic.</strong> Short videos, YouTube, wherever you've got traffic, pointed at your page.</li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="tip">
+      <p><strong>My take:</strong> I'm a big believer in warming people up before they ever see an offer. That's why I'm making a little video like this one instead of just dropping a link. Hybrid Capture takes that same idea and turns it into a page you can build over and over. If you're not going to put in the work, don't buy it. If you are, it's worth a look.</p>
+    </div>
+  </section>
+
+  <div class="cta-block">
+    <h2 style="margin-bottom:18px">Take the time to <em>watch the video</em></h2>
+    <a class="btn" href="https://warriorplus.com/o2/a/stmhm89/0" target="_blank" rel="sponsored noopener">Yes, Show Me Hybrid Capture &rarr;</a>
+    <p class="micro">Don't forget the code <span class="code">HYBRID20</span> at checkout.</p>
+  </div>
+
+  <p class="sig" style="margin-top:44px">I'll talk to you all later.<br><strong>Scott</strong> from Bank Behind the Screen</p>
+
+  <footer>
+    <p><strong>Affiliate disclosure:</strong> The buttons on this page are affiliate links. If you buy through them, I may earn a commission at no extra cost to you.</p>
+    <p><strong>Income disclaimer:</strong> This page is my personal opinion, based on the product creator's demo video. No income is promised or guaranteed. Results depend on your effort, your skills and your marketing, and many people earn nothing. Features, prices, bonuses and coupon codes are as the creator described them in his pre-launch video and may change, so check the official page for current terms.</p>
+    <p>Hybrid Capture is created by Lee Murray. I am not affiliated with YouTube, ChatGPT, Gemini, Leads Leap, Thrive Architect or Systeme.io. All trademarks belong to their respective owners.</p>
+  </footer>
+
+</div>
+
+<script>
+  // Click the thumbnail to load and play the YouTube video
+  (function(){
+    var cover=document.getElementById('cover'), box=document.getElementById('videoBox');
+    var WATCH='https://www.youtube.com/watch?v=P01IJI21YzQ';
+    cover.addEventListener('click',function(){
+      // YouTube refuses to play embedded inside local files and most preview panes
+      // (only real http/https pages work), so open it on YouTube instead in that case.
+      if(!/^https?:$/.test(location.protocol)){ window.open(WATCH,'_blank','noopener'); return; }
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/P01IJI21YzQ?si=Wtcs91GXV1eXdIde&autoplay=1&rel=0';
+      f.title='YouTube video player';
+      f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+      f.setAttribute('allowfullscreen','');
+      box.replaceChild(f,cover);
+    });
+  })();
+</script>
+</body>
+</html>
